@@ -1,0 +1,23 @@
+gVimWin32FullScreen
+                                     Derek McLoughlin
+
+* What is this
+  Put gvim into full screen on the primary monitor in Microsoft Windows.
+  This is a copy of Yasuhiro Matsumoto's VimTweak's EnableMaximize
+  functionality	modified to deal with window borders and making the
+  window overlap the task bar.
+
+  Note: this only works on the primary monitor. I'll add other monitor support
+  later.
+
+* Compiling
+  Compile the DLL using any version of Visual C++ for Windows
+  Use the makefile - nmake
+  copy gvimfullscreen.dll to the directory that has gvim.exe
+
+* Usage
+    Toggle
+    :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)
+
+	For  example:
+	map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
